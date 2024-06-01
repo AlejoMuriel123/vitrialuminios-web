@@ -43,7 +43,7 @@ export default function Header(props: HeaderProps) {
       {trigger ? (
         <ScrollToColor>
           <AppBar
-            className="px-20 py-8 bg-[#63a5d4] text-white"
+            className="px-8 sm:px-10 md:px-20 bg-[#63a5d4] text-white"
             position="fixed"
             color="transparent"
           >
@@ -83,7 +83,7 @@ export default function Header(props: HeaderProps) {
       ) : (
         <ScrollToColor>
           <AppBar
-            className="px-20 py-8 bg-trasnparent text-white"
+            className="px-8 sm:px-10 md:px-20 py-8 bg-trasnparent text-white"
             position="fixed"
             color="transparent"
             elevation={0}

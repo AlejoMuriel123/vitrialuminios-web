@@ -45,7 +45,7 @@ export default function ScrollToColor(props: ScrollToColorProps) {
 
   return React.cloneElement(children, {
     style: {
-      boxShadow: trigger ? "none" : "none",
+      boxShadow: trigger ? "0px 0px 8px 0PX #000" : "none",
       paddingTop: trigger ? paddingAfter : paddingBefore,
       paddingBottom: trigger ? paddingAfter : paddingBefore,
       backgroundColor: trigger ? bgColorAfter : bgColorBefore,

@@ -23,7 +23,6 @@ export default function Contact() {
           <MailIcon />
           <p className="pt-4 text-xl font-medium">Correo</p>
           <p className="pt-4 text-center text-gray-500">vitrialuminiosdelvalle@gmail.com</p>
-          <p className="text-center text-gray-500">Twitter: @vitrialuminiosdelvalle</p>
         </div>
       </div>
     </div>
