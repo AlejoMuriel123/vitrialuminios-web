@@ -8,7 +8,7 @@ function Carousel() {
 
   return (
     <div>
-      <p className="text-2xl xl:text-4xl text-center pt-28">Empresas aliadas</p>
+      <p className="text-2xl xl:text-4xl text-center py-28">Empresas aliadas</p>
       <div className="body">
         <div className="Marquee">
           <div className="Marquee-content">

@@ -20,19 +20,25 @@ export default function MenuDrawer({
         </div>
         <div className="flex flex-col items-center pl-16 pr-16">
           <a className="text-white hover:text-red-700 text-xl m-6" href="#home">
-            Home
+            Inicio
           </a>
           <a
             className="text-white hover:text-red-700 text-xl m-6"
-            href="#skills"
+            href="#about"
           >
-            Skills
+            Nosotros
+          </a>
+          <a
+            className="text-white hover:text-red-700 text-xl m-6"
+            href="#products"
+          >
+            Productos
           </a>
           <a
             className="text-white hover:text-red-700 text-xl m-6"
             href="#contact"
           >
-            Contact
+            Contácto
           </a>
         </div>
       </Paper>
