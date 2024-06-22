@@ -8,9 +8,19 @@ export default function Footer() {
         Reserved.
       </p>
       <div className="flex flex-row gap-4">
-        <FacebookIcon />
-        <TwitterIcon />
-        <InstagramIcon />
+        <a
+          href="https://www.facebook.com/vitrialuminiosdelvalle"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <FacebookIcon />
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noreferrer">
+          <TwitterIcon />
+        </a>
+        <a href="https://www.instagram.com" target="_blank" rel="noreferrer">
+          <InstagramIcon />
+        </a>
       </div>
     </div>
   );
