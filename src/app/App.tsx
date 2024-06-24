@@ -12,7 +12,7 @@ import "./App.css";
 function App() {
   return (
     <div>
-       <div className="floating-text">Out of service</div>
+      <div className="floating-text">Out of service</div>
       <Hidden smDown>
         <Header />
       </Hidden>

@@ -1,8 +1,8 @@
 /* Home */
 
 .home-image {
-  background-image: linear-gradient(rgba(0, 0, 0, 0.59), rgba(0, 0, 0, 0.59)),
-    url("/src/app/assets/img/home/home-image.png");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.8)),
+    url("/src/app/assets/img/home/test.jpg");
   min-height: 779px;
   position: relative;
   background-position: center;
