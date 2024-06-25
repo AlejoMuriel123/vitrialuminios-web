@@ -20,17 +20,17 @@ interface ScrollToColorProps {
   window?: Window;
 }
 
-export default function ScrollToColor(props: ScrollToColorProps) {
+export const ScrollToColor = (props: ScrollToColorProps) => {
   const {
     threshold = 0,
     bgColorBefore = "transparent",
     bgColorAfter = "white",
-    textColorBefore = "white",
-    textColorAfter = "black",
+    // textColorBefore = "white",
+    // textColorAfter = "black",
     fadeIn = "0.3s ease-in",
     fadeOut = "0.3s ease-out",
-    paddingBefore = "1rem",
-    paddingAfter = "0.9rem",
+    // paddingBefore = "1rem",
+    // paddingAfter = "0.9rem",
     fontSizeBefore = "40px",
     fontSizeAfter = "10px",
     children,
@@ -45,14 +45,14 @@ export default function ScrollToColor(props: ScrollToColorProps) {
 
   return React.cloneElement(children, {
     style: {
-      boxShadow: trigger ? "0px 0px 8px 0PX #000" : "none",
-      paddingTop: trigger ? paddingAfter : paddingBefore,
-      paddingBottom: trigger ? paddingAfter : paddingBefore,
+      // boxShadow: trigger ? "0px 0px 8px 0PX #000" : "none",
+      // paddingTop: trigger ? paddingAfter : paddingBefore,
+      // paddingBottom: trigger ? paddingAfter : paddingBefore,
       backgroundColor: trigger ? bgColorAfter : bgColorBefore,
-      color: trigger ? textColorAfter : textColorBefore,
+      // color: trigger ? textColorAfter : textColorBefore,
       transition: trigger ? fadeIn : fadeOut,
       fontSize: trigger ? fontSizeAfter : fontSizeBefore,
     },
     ...other,
   });
-}
+};

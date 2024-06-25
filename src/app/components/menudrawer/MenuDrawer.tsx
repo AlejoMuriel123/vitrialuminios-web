@@ -6,10 +6,7 @@ interface MenuDrawerProps {
   toggleMenuDrawer: () => void;
 }
 
-export default function MenuDrawer({
-  open,
-  toggleMenuDrawer,
-}: MenuDrawerProps) {
+export const MenuDrawer = ({ open, toggleMenuDrawer }: MenuDrawerProps) => {
   return (
     <Drawer anchor="right" open={open} onClick={toggleMenuDrawer}>
       <Paper sx={{ backgroundColor: "black", height: "100%", borderRadius: 0 }}>
@@ -34,14 +31,8 @@ export default function MenuDrawer({
           >
             Productos
           </a>
-          <a
-            className="text-white hover:text-red-700 text-xl m-6"
-            href="#contact"
-          >
-            Contácto
-          </a>
         </div>
       </Paper>
     </Drawer>
   );
-}
+};

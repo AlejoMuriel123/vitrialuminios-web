@@ -1,18 +1,26 @@
 import { Hidden } from "@mui/material";
-import Footer from "./components/footer/Footer";
-import Header from "./components/header/Header";
 import About from "./sections/about/About";
 import Carosuel from "./sections/carousel/Carosuel";
-import Contact from "./sections/contact/Contact";
+// import Contact from "./sections/contact/Contact";
 import Home from "./sections/home/Home";
 import Products from "./sections/products/Products";
-import SmallHeader from "./components/smallheader/SmallHeader";
+import { OutOfServiceModal, Footer, Header, SmallHeader } from "./components";
+import { FloatingWhatsApp } from "@carlos8a/react-whatsapp-floating-button";
 import "./App.css";
 
-function App() {
+export default function App() {
   return (
-    <div>
-      <div className="floating-text">Out of service</div>
+    <>
+      <OutOfServiceModal />
+      <FloatingWhatsApp
+        phoneNumber="573188372089"
+        accountName="Vitrialuminios"
+        avatar="src/app/assets/img/logo/logo-white.png"
+        initialMessageByServer="Hola, en qué podemos ayudarte?"
+        statusMessage="Disponible"
+        placeholder="Escribe tu mensaje..."
+        allowEsc={true}
+      />
       <Hidden smDown>
         <Header />
       </Hidden>
@@ -23,10 +31,8 @@ function App() {
       <About />
       <Products />
       <Carosuel />
-      <Contact />
+      {/* <Contact /> */}
       <Footer />
-    </div>
+    </>
   );
 }
-
-export default App;
