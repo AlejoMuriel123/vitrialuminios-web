@@ -2,8 +2,8 @@ import React, { cloneElement, useState } from "react";
 import PropTypes from "prop-types";
 import { AppBar, IconButton, useScrollTrigger } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import ScrollToColor from "../scrolltocolor/ScrollToColor";
-import MenuDrawer from "../menudrawer/MenuDrawer";
+import { ScrollToColor } from "../ScrollToColor";
+import { MenuDrawer } from "../MenuDrawer";
 import logoBlue from "../../assets/img/logo/logo-blue.png";
 import logoWhite from "../../assets/img/logo/logo-white.png";
 
@@ -32,7 +32,7 @@ ElevationScroll.propTypes = {
   window: PropTypes.func,
 };
 
-export default function SmallHeader({ window }: SmallHeaderProps) {
+export const SmallHeader = ({ window }: SmallHeaderProps) => {
   const [openMenuDrawer, setOpenMenuDrawer] = useState(false);
 
   const handleOpenMenuDrawer = () => {
@@ -57,11 +57,7 @@ export default function SmallHeader({ window }: SmallHeaderProps) {
               elevation={0}
             >
               <div className="flex justify-between items-center">
-                <img
-                  src={logoBlue}
-                  className="w-16"
-                  alt="icon"
-                />
+                <img src={logoBlue} className="w-16" alt="icon" />
                 <div>
                   <MenuDrawer
                     open={openMenuDrawer}
@@ -76,11 +72,7 @@ export default function SmallHeader({ window }: SmallHeaderProps) {
           </ScrollToColor>
         ) : (
           <ScrollToColor>
-            <AppBar
-              className="px-10 py-4"
-              position="fixed"
-              elevation={0}
-            >
+            <AppBar className="px-10 py-4" position="fixed" elevation={0}>
               <div className="flex justify-between items-center">
                 <img src={logoWhite} className="w-16" alt="icon" />
                 <div>
@@ -99,4 +91,4 @@ export default function SmallHeader({ window }: SmallHeaderProps) {
       </ElevationScroll>
     </>
   );
-}
+};
