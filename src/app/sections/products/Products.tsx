@@ -16,9 +16,9 @@ export default function Products() {
   ];
 
   return (
-    <div id="products" className="px-10 xl:px-40 py-20 bg-gray-100">
+    <div id="products" className="px-10 xl:px-40 py-20 bg-gray-100 pt-[100px]">
       <div className="flex jutify-center flex-col items-center">
-        <p className="text-2xl xl:text-4xl text-center pt-10">
+        <p className="text-2xl xl:text-4xl text-center pt-[100px]">
           Trabajos destacados
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 mt-8">
