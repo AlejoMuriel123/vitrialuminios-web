@@ -1,16 +1,14 @@
-import { Hidden } from "@mui/material";
-import About from "./sections/about/About";
-import Carosuel from "./sections/carousel/Carosuel";
-// import Contact from "./sections/contact/Contact";
-import Home from "./sections/home/Home";
-import Products from "./sections/products/Products";
+import { About, Home, Gallery } from "./sections";
 import { OutOfServiceModal, Footer, Header, SmallHeader } from "./components";
 import { FloatingWhatsApp } from "@carlos8a/react-whatsapp-floating-button";
 import "./App.css";
+import { useMobile } from "./hooks/useMobile";
 
 export default function App() {
+  const { isMobile } = useMobile();
+
   return (
-    <>
+    <main>
       <OutOfServiceModal />
       <FloatingWhatsApp
         phoneNumber="573188372089"
@@ -21,18 +19,12 @@ export default function App() {
         placeholder="Escribe tu mensaje..."
         allowEsc={true}
       />
-      <Hidden smDown>
-        <Header />
-      </Hidden>
-      <Hidden smUp>
-        <SmallHeader />
-      </Hidden>
+      {isMobile ? <SmallHeader /> : <Header />}
+
       <Home />
+      <Gallery />
       <About />
-      <Products />
-      <Carosuel />
-      {/* <Contact /> */}
       <Footer />
-    </>
+    </main>
   );
 }

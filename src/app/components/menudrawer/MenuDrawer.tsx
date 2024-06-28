@@ -7,29 +7,41 @@ interface MenuDrawerProps {
 }
 
 export const MenuDrawer = ({ open, toggleMenuDrawer }: MenuDrawerProps) => {
+  const { width } = document.body.getBoundingClientRect();
+
   return (
     <Drawer anchor="right" open={open} onClick={toggleMenuDrawer}>
-      <Paper sx={{ backgroundColor: "black", height: "100%", borderRadius: 0 }}>
+      <Paper
+        sx={{
+          backgroundColor: "rgb(31, 41, 55)",
+          height: "100%",
+          width: width / 1.5,
+          borderRadius: 0,
+        }}
+      >
         <div className="items-start p-3">
           <IconButton onClick={toggleMenuDrawer}>
             <ArrowBackIcon className="text-white" />
           </IconButton>
         </div>
         <div className="flex flex-col items-center pl-16 pr-16">
-          <a className="text-white hover:text-red-700 text-xl m-6" href="#home">
+          <a
+            className="text-white hover:text-blue-600 text-xl m-6"
+            href="#home"
+          >
             Inicio
           </a>
           <a
-            className="text-white hover:text-red-700 text-xl m-6"
+            className="text-white hover:text-blue-600 text-xl m-6"
+            href="#gallery"
+          >
+            Galería
+          </a>
+          <a
+            className="text-white hover:text-blue-600 text-xl m-6"
             href="#about"
           >
             Nosotros
-          </a>
-          <a
-            className="text-white hover:text-red-700 text-xl m-6"
-            href="#products"
-          >
-            Productos
           </a>
         </div>
       </Paper>

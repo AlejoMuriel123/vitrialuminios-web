@@ -6,6 +6,18 @@
     "module": "ESNext",
     "skipLibCheck": true,
 
+    "sourceMap": true,
+    "inlineSources": true,
+    /* Enables platform specific extensions */
+    "moduleSuffixes": [".ios", ".android", ""],
+
+    /* Completeness */
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
+
     /* Bundler mode */
     "moduleResolution": "bundler",
     "allowImportingTsExtensions": true,

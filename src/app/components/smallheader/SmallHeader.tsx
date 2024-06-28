@@ -5,7 +5,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import { ScrollToColor } from "../ScrollToColor";
 import { MenuDrawer } from "../MenuDrawer";
 import logoBlue from "../../assets/img/logo/logo-blue.png";
-// import logoWhite from "../../assets/img/logo/logo-white.png";
+import logoWhite from "../../assets/img/logo/logo-white.png";
 
 interface SmallHeaderProps {
   window?: () => Window;
@@ -64,7 +64,7 @@ export const SmallHeader = ({ window }: SmallHeaderProps) => {
                     toggleMenuDrawer={handleOpenMenuDrawer}
                   />
                   <IconButton onClick={handleOpenMenuDrawer}>
-                    <MenuIcon className="mb-2 text-[#1C3B82]" />
+                    <MenuIcon className="mb-2 text-blue-700" />
                   </IconButton>
                 </div>
               </div>
@@ -74,14 +74,14 @@ export const SmallHeader = ({ window }: SmallHeaderProps) => {
           <ScrollToColor>
             <AppBar className="px-10 py-4" position="fixed" elevation={0}>
               <div className="flex justify-between items-center">
-                <img src={logoBlue} className="w-16" alt="icon" />
+                <img src={logoWhite} className="w-16" alt="icon" />
                 <div>
                   <MenuDrawer
                     open={openMenuDrawer}
                     toggleMenuDrawer={handleOpenMenuDrawer}
                   />
                   <IconButton onClick={handleOpenMenuDrawer}>
-                    <MenuIcon className="mb-2 text-[#1C3B82]" />
+                    <MenuIcon className="mb-2 text-white" />
                   </IconButton>
                 </div>
               </div>

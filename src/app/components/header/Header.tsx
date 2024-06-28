@@ -53,22 +53,22 @@ export const Header = (props: HeaderProps) => {
               </a>
               <div className="flex justify-center items-center">
                 <a
-                  className="text-black hover:text-[#63a5d4] px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
+                  className="text-black hover:text-blue-700 px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
                   href="#home"
                 >
                   Inicio
                 </a>
                 <a
-                  className="text-black hover:text-[#63a5d4] px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
+                  className="text-black hover:text-blue-700 px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
+                  href="#gallery"
+                >
+                  Galería
+                </a>
+                <a
+                  className="text-black hover:text-blue-700 px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
                   href="#about"
                 >
                   Nosotros
-                </a>
-                <a
-                  className="text-black hover:text-[#63a5d4] px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
-                  href="#products"
-                >
-                  Productos
                 </a>
               </div>
             </div>
@@ -77,7 +77,7 @@ export const Header = (props: HeaderProps) => {
       ) : (
         <ScrollToColor>
           <AppBar
-            className="px-8 sm:px-10 md:px-20 py-8 bg-trasnparent text-white"
+            className="px-8 sm:px-10 md:px-20 py-8 bg-transparent text-white"
             position="fixed"
             color="transparent"
             elevation={0}
@@ -88,22 +88,22 @@ export const Header = (props: HeaderProps) => {
               </a>
               <div className="flex justify-center items-center">
                 <a
-                  className="text-white hover:text-[#63a5d4] px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
+                  className="text-white hover:text-blue-700 px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
                   href="#home"
                 >
                   Inicio
                 </a>
                 <a
-                  className="text-white hover:text-[#63a5d4] px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
+                  className="text-white hover:text-blue-700 px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
+                  href="#gallery"
+                >
+                  Galería
+                </a>
+                <a
+                  className="text-white hover:text-blue-700 px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
                   href="#about"
                 >
                   Nosotros
-                </a>
-                <a
-                  className="text-white hover:text-[#63a5d4] px-4 py-2 mx-2 rounded text-lg transition duration-300 ease-in-out"
-                  href="#products"
-                >
-                  Productos
                 </a>
               </div>
             </div>
