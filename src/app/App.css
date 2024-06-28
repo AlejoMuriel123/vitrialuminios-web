@@ -63,6 +63,26 @@ html {
   }
 }
 
+/* About */
+
+@media (max-width: 768px) {
+	.title-shadow {
+    text-shadow: 1px 1px 2px #fff;
+  }
+}
+
+@media (max-width: 425px) {
+	.title-shadow {
+    text-shadow: 1px 1px 2px #fff;
+  }
+}
+
+@media (max-width: 375px) {
+	.title-shadow {
+    text-shadow: 1px 1px 2px #fff;
+  }
+}
+
 /* Floating text */
 
 .floating-text {
