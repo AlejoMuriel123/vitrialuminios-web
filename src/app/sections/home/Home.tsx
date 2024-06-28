@@ -1,43 +1,51 @@
+import { useMobile } from "../../hooks/useMobile";
+import { jwtServicesConfig } from "../../jwtServices/jwtServicesConfig";
 import { Carousel } from "flowbite-react";
 
-export default function Home() {
+export const Home = () => {
+  const { isMobile } = useMobile();
+
+  const slides = [
+    "Vitrialuminios, el lugar para tus proyectos.",
+    "Innovación en cada paso, construyendo un futuro brillante.",
+    "Calidad y confianza en cada proyecto.",
+    "Transformando espacios con excelencia.",
+  ];
+
   return (
-    <div id="home" className="w-full h-screen relative">
-      <Carousel indicators={false} >
-        <img
-          src="https://flowbite.com/docs/images/carousel/carousel-1.svg"
-          alt="..."
-        />
-        <img
-          src="https://flowbite.com/docs/images/carousel/carousel-2.svg"
-          alt="..."
-        />
-        <img
-          src="https://flowbite.com/docs/images/carousel/carousel-3.svg"
-          alt="..."
-        />
-        <img
-          src="https://flowbite.com/docs/images/carousel/carousel-4.svg"
-          alt="..."
-        />
-        <img
-          src="https://flowbite.com/docs/images/carousel/carousel-5.svg"
-          alt="..."
-        />
+    <section id="home" className="w-full h-[80vh] relative">
+      <Carousel
+        indicators={false}
+        leftControl={isMobile}
+        rightControl={isMobile}
+        className="h-full w-full absolute inset-0"
+      >
+        {slides.map((text, index) => (
+          <div key={index} className="relative w-full h-full">
+            <img
+              className="w-full h-full object-cover brightness-50"
+              src={`${jwtServicesConfig.baseUrl}/public/vitrialuminios-${
+                index * (Math.floor(Math.random() * (50 / 4)) + 1)
+              }.jpg`}
+              alt={`Image ${index * 5}`}
+            />
+            <div className="absolute inset-0 flex flex-col justify-center items-center w-2/3 mx-auto">
+              <div className="text-center text-white space-y-8">
+                <p className="text-4xl sm:text-5xl xl:text-7xl font-bold leading-tight shadow-md">
+                  {text}
+                </p>
+              </div>
+            </div>
+          </div>
+        ))}
       </Carousel>
-      <div className="absolute inset-0 flex justify-center items-center">
-        <div className="flex flex-col items-center text-white">
-          <p className="text-3xl sm:text-4xl xl:text-7xl text-center px-0 sm:px-20">
-            Da un paso en el futuro de la construcción con Vitrialuminios
-          </p>
-          <a
-            href="#products"
-            className="bg-[#63a5d4] mt-8 px-10 py-4 rounded-full hover:bg-gray-700  transition duration-300 ease-in-out"
-          >
-            Ver productos
-          </a>
-        </div>
-      </div>
-    </div>
+
+      <a
+        href="#products"
+        className="absolute -bottom-8 text-blue-700 border-2 border-blue-700 bg-white left-0 right-0 mx-auto w-fit inline-block px-10 py-4 rounded-full text-xl font-semibold hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out transform hover:translate-y-1 hover:shadow-lg"
+      >
+        <span>&#9660;</span> Ver Fotos de trabajos <span>&#9660;</span>
+      </a>
+    </section>
   );
-}
+};
