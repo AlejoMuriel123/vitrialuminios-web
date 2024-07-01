@@ -5,7 +5,7 @@ interface IconsProps {
 }
 
 export const InstagramIcon = (props: IconsProps) => {
-  const { width = 20, height = 20 } = props;
+  const { width = 32, height = 32 } = props;
   return (
     <svg
       width={width}

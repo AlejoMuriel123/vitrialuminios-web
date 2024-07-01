@@ -30,7 +30,7 @@ export const Footer = () => {
               <InstagramIcon />
             </a>
           </div>
-          <form className="flex flex-col items-center md:items-start">
+          {/* <form className="flex flex-col items-center md:items-start">
             <label htmlFor="email" className="text-sm text-gray-400 mb-2">
               Suscríbete a nuestro boletín:
             </label>
@@ -49,7 +49,7 @@ export const Footer = () => {
                 Suscribir
               </button>
             </div>
-          </form>
+          </form> */}
         </div>
       </div>
     </footer>

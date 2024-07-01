@@ -2,7 +2,7 @@ import { jwtServicesConfig } from "../../jwtServices/jwtServicesConfig";
 
 export const About = () => {
   return (
-    <section
+    <div
       id="about"
       className="flex flex-col md:flex-row gap-8 relative items-center justify-center md:overflow-hidden bg-gray-50 p-10 md:p-20"
     >
@@ -28,6 +28,6 @@ export const About = () => {
           loading="lazy"
         />
       </div>
-    </section>
+    </div>
   );
 };

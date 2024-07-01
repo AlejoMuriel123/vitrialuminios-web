@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@carlos8a/react-whatsapp-floating-button": "^0.0.2",
     "@emotion/react": "^11.11.4",
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.18",
@@ -20,6 +19,7 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.4",
+    "react-floating-whatsapp": "^5.0.8",
     "styled-components": "^6.1.11"
   },
   "devDependencies": {

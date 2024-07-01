@@ -7,7 +7,7 @@ export const Partners = () => {
   ];
 
   return (
-    <section className="flex items-center justify-center py-12 px-0 relative overflow-hidden">
+    <div className="flex items-center justify-center py-12 px-0 relative overflow-hidden">
       <div className="Marquee">
         <div className="Marquee-content">
           {images.map((image, index) => (
@@ -32,6 +32,6 @@ export const Partners = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };

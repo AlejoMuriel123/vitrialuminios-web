@@ -17,7 +17,7 @@ export const Gallery = () => {
   };
 
   return (
-    <section id="gallery" className="bg-gray-100 pb-12 w-full">
+    <div id="gallery" className="bg-gray-100 pb-12 w-full">
       <Partners />
 
       <div className="flex flex-col items-center px-10 xl:px-40">
@@ -68,6 +68,6 @@ export const Gallery = () => {
           </button>
         </div>
       </Modal>
-    </section>
+    </div>
   );
 };
