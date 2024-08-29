@@ -1,6 +1,7 @@
 export { OutOfServiceModal } from "./OutOfServiceModal";
-export { SmallHeader } from "./SmallHeader";
-export { ScrollToColor } from "./ScrollToColor";
-export { MenuDrawer } from "./MenuDrawer";
-export { Header } from "./Header";
-export { Footer } from "./Footer";
+export { SmallHeader } from "./smallheader";
+export { ScrollToColor } from "./scrolltocolor";
+export { MenuDrawer } from "./menudrawer";
+export { Header } from "./header";
+export { Footer } from "./footer";
+export { CarouselHome } from "./carouselhome";

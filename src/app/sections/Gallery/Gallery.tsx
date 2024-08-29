@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Modal } from "@mui/material";
+import CancelIcon from "@mui/icons-material/Cancel";
 import { Partners } from "../Partners";
 import { jwtServicesConfig } from "../../jwtServices/jwtServicesConfig";
 import { useMobile } from "../../hooks/useMobile";
@@ -26,6 +27,8 @@ export const Gallery = () => {
             <div
               key={index}
               className="relative cursor-pointer overflow-hidden rounded-lg shadow-lg"
+              data-aos="fade-up"
+              data-aos-delay="1000"
               onClick={() =>
                 setSelectedImage(
                   `${jwtServicesConfig.baseUrl}/public/vitrialuminios-${index}.jpg`
@@ -37,6 +40,7 @@ export const Gallery = () => {
                 src={`${jwtServicesConfig.baseUrl}/public/vitrialuminios-${index}.jpg`}
                 alt={`Trabajo ${index}`}
               />
+              <div className="absolute inset-0 bg-blue-500 opacity-0 hover:opacity-50 transition-opacity duration-300" />
             </div>
           ))}
         </div>
@@ -62,9 +66,9 @@ export const Gallery = () => {
           />
           <button
             onClick={() => setSelectedImage("")}
-            className="absolute top-4 right-4 text-white bg-black bg-opacity-50 rounded-full p-2 hover:bg-opacity-75 transition duration-300"
+            className="absolute top-4 right-4 text-white"
           >
-            ✕
+            <CancelIcon fontSize="large" />
           </button>
         </div>
       </Modal>

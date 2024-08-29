@@ -1,7 +1,7 @@
 import React, { cloneElement } from "react";
 import PropTypes from "prop-types";
 import { AppBar, useScrollTrigger } from "@mui/material";
-import { ScrollToColor } from "../ScrollToColor";
+import { ScrollToColor } from "../scrolltocolor";
 import logoBlue from "../../assets/img/logo/logo-blue.png";
 import logoWhite from "../../assets/img/logo/logo-white.png";
 

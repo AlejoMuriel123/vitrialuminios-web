@@ -1,8 +1,17 @@
 import { About, Home, Gallery } from "./sections";
-import { OutOfServiceModal, Footer, Header, SmallHeader } from "./components";
+import {
+  OutOfServiceModal,
+  Footer,
+  Header,
+  SmallHeader,
+  CarouselHome,
+} from "./components";
 import { FloatingWhatsApp } from "@carlos8a/react-whatsapp-floating-button";
 import "./App.css";
 import { useMobile } from "./hooks/useMobile";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import ScrollAnimation from "./components/scrollanimation/ScrollAnimation";
 
 export default function App() {
   const { isMobile } = useMobile();
@@ -20,11 +29,12 @@ export default function App() {
         allowEsc={true}
       />
       {isMobile ? <SmallHeader /> : <Header />}
-
-      <Home />
-      <Gallery />
-      <About />
-      <Footer />
+      <ScrollAnimation>
+        <CarouselHome />
+        <Gallery />
+        <About />
+        <Footer />
+      </ScrollAnimation>
     </main>
   );
 }

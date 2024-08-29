@@ -4,8 +4,6 @@ import {
   DialogTitle,
   DialogContent,
   DialogContentText,
-  DialogActions,
-  Button,
 } from "@mui/material";
 
 export const OutOfServiceModal = () => {
@@ -23,18 +21,25 @@ export const OutOfServiceModal = () => {
       aria-describedby="alert-dialog-description"
     >
       <DialogTitle id="alert-dialog-title">
-        Nos encontramos actualmente fuera de servicio
+        <p className="text-blue-700 font-bold text-2xl text-center">
+          Nos encontramos actualmente fuera de servicio
+        </p>
       </DialogTitle>
       <DialogContent>
         <DialogContentText id="alert-dialog-description">
-          Por favor, ponte en contacto con el equipo de soporte.
+          <p className="text-lg text-center">
+            Por favor, ponte en contacto con el equipo de soporte.
+          </p>
         </DialogContentText>
       </DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose} autoFocus>
+      <div className="flex justify-center pb-4">
+        <button
+          className="bg-blue-600 hover:bg-blue-700 transition duration-300 text-white font-bold py-2 px-4 rounded-3xl"
+          onClick={handleClose}
+        >
           Cerrar
-        </Button>
-      </DialogActions>
+        </button>
+      </div>
     </Dialog>
   );
 };
