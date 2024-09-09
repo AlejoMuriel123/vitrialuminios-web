@@ -8,13 +8,16 @@ import { useMobile } from "../../hooks/useMobile";
 export const Gallery = () => {
   const { isMobile } = useMobile();
 
-  const totalWorks = 58; // Número total de elementos
+  const totalWorks = 81; // Índice máximo de trabajos (81)
+  const startWorkIndex = 62; // Índice inicial de las imágenes (62)
   const initialPageSize = isMobile ? 4 : 8; // Número inicial de elementos por página
   const [visibleWorks, setVisibleWorks] = useState(initialPageSize);
   const [selectedImage, setSelectedImage] = useState("");
 
   const loadMore = () => {
-    setVisibleWorks((prev) => Math.min(prev + initialPageSize, totalWorks));
+    setVisibleWorks((prev) =>
+      Math.min(prev + initialPageSize, totalWorks - startWorkIndex + 1)
+    );
   };
 
   return (
@@ -23,28 +26,33 @@ export const Gallery = () => {
 
       <div className="flex flex-col items-center px-10 xl:px-40">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {Array.from({ length: visibleWorks }).map((_, index) => (
-            <div
-              key={index}
-              className="relative cursor-pointer overflow-hidden rounded-lg shadow-lg"
-              data-aos="fade-up"
-              data-aos-delay="1000"
-              onClick={() =>
-                setSelectedImage(
-                  `${jwtServicesConfig.baseUrl}/public/vitrialuminios-${index}.jpg`
-                )
-              }
-            >
-              <img
-                className="h-full w-full object-cover transition-transform duration-300 transform hover:scale-105"
-                src={`${jwtServicesConfig.baseUrl}/public/vitrialuminios-${index}.jpg`}
-                alt={`Trabajo ${index}`}
-              />
-              <div className="absolute inset-0 bg-blue-500 opacity-0 hover:opacity-50 transition-opacity duration-300" />
-            </div>
-          ))}
+          {/* Recorre las imágenes desde el índice 62 hasta 81 */}
+          {Array.from({ length: visibleWorks }).map((_, index) => {
+            const imageIndex = startWorkIndex + index; // Índice de la imagen
+            return (
+              <div
+                key={index}
+                className="relative cursor-pointer overflow-hidden rounded-lg shadow-lg h-72 w-full"
+                data-aos="fade-up"
+                data-aos-delay="1000"
+                onClick={() =>
+                  setSelectedImage(
+                    `${jwtServicesConfig.baseUrl}/works/vitrialuminios-${imageIndex}.jpg`
+                  )
+                }
+              >
+                <img
+                  className="h-full w-full object-cover transition-transform duration-300 transform hover:scale-105"
+                  src={`${jwtServicesConfig.baseUrl}/works/vitrialuminios-${imageIndex}.jpg`}
+                  alt={`Trabajo ${imageIndex}`}
+                />
+                <div className="absolute inset-0 bg-blue-500 opacity-0 hover:opacity-50 transition-opacity duration-300" />
+              </div>
+            );
+          })}
         </div>
-        {visibleWorks < totalWorks && (
+        {/* Ocultar el botón cuando ya se han mostrado todas las imágenes */}
+        {visibleWorks < totalWorks - startWorkIndex + 1 && (
           <button
             onClick={loadMore}
             className="mt-12 bg-blue-700 text-white px-6 py-2 rounded-full hover:bg-blue-800 transition duration-300"

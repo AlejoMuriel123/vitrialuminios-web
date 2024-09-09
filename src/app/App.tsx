@@ -1,4 +1,4 @@
-import { About, Home, Gallery } from "./sections";
+import { About, Gallery } from "./sections";
 import {
   OutOfServiceModal,
   Footer,
@@ -18,18 +18,18 @@ export default function App() {
 
   return (
     <main>
-      <OutOfServiceModal />
-      <FloatingWhatsApp
-        phoneNumber="573188372089"
-        accountName="Vitrialuminios"
-        avatar="src/app/assets/img/logo/logo-white.png"
-        initialMessageByServer="Hola, en qué podemos ayudarte?"
-        statusMessage="Disponible"
-        placeholder="Escribe tu mensaje..."
-        allowEsc={true}
-      />
-      {isMobile ? <SmallHeader /> : <Header />}
       <ScrollAnimation>
+        <OutOfServiceModal />
+        <FloatingWhatsApp
+          phoneNumber="573188372089"
+          accountName="Vitrialuminios"
+          avatar="src/app/assets/img/logo/logo-white.png"
+          initialMessageByServer="Hola, en qué podemos ayudarte?"
+          statusMessage="Disponible"
+          placeholder="Escribe tu mensaje..."
+          allowEsc={true}
+        />
+        {isMobile ? <SmallHeader /> : <Header />}
         <CarouselHome />
         <Gallery />
         <About />

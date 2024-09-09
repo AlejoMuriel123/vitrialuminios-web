@@ -34,35 +34,11 @@ html {
 
 /* Carousel home */
 
-/* Design three */
 .gradient-span-copy {
   text-transform: none;
-  text-shadow: 0 1px 20px #3362e4;
+  text-shadow: 0 1px 20px #3362e4 0 0 10px #042a93;
   -webkit-text-fill-color: transparent;
   background-image: linear-gradient(10deg, #042a93, #3362e4 50%, #53b9ec);
   -webkit-background-clip: text;
   background-clip: text;
 }
-
-/* Design two */
-/* .gradient-span-copy {
-  text-transform: none;
-  text-shadow: 
-  0 1px 20px #3362e4
-  0 0 10px #042a93;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(10deg, #042a93, #3362e4 50%, #53b9ec);
-  -webkit-background-clip: text;
-  background-clip: text;
-} */
-
-/* Design one */
-/* .gradient-span-copy {
-  text-transform: none;
-  text-shadow: 1px 1px #3362e4;
-  color: #FFF;
-  -webkit-text-fill-color: transparent;
-  background-image: linear-gradient(10deg, #042a93, #3362e4 50%, #53b9ec);
-  -webkit-background-clip: text;
-  background-clip: text;
-} */
