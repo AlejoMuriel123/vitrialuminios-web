@@ -1,9 +1,10 @@
 import React, { cloneElement } from "react";
 import PropTypes from "prop-types";
 import { AppBar, useScrollTrigger } from "@mui/material";
-import { ScrollToColor } from "../ScrollToColor";
+import { ScrollToColor } from "../scrolltocolor";
 import logoBlue from "../../assets/img/logo/logo-blue.png";
-import logoWhite from "../../assets/img/logo/logo-white.png";
+// import logoWhite from "../../assets/img/logo/logo-white.png";
+import logoTransparent from "../../assets/img/logo/vitrialuminios-logo-transparent.png";
 
 interface HeaderProps {
   window?: () => Window;
@@ -77,14 +78,14 @@ export const Header = (props: HeaderProps) => {
       ) : (
         <ScrollToColor>
           <AppBar
-            className="px-8 sm:px-10 md:px-20 py-8 bg-transparent text-white"
+            className="px-8 sm:px-10 md:px-20 py-8 text-white"
             position="fixed"
             color="transparent"
             elevation={0}
           >
             <div className="flex justify-between items-center">
               <a className="text-2xl" href="/">
-                <img className="w-28" src={logoWhite} alt="logo" />
+                <img className="w-28" src={logoTransparent} alt="logo" />
               </a>
               <div className="flex justify-center items-center">
                 <a

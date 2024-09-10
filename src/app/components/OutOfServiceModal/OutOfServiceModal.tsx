@@ -1,12 +1,9 @@
 import { useState } from "react";
-import {
-  Dialog,
-  DialogTitle,
-  DialogContent,
-  DialogContentText,
-  DialogActions,
-  Button,
-} from "@mui/material";
+import { Snackbar, Alert, Slide, SlideProps } from "@mui/material";
+
+function SlideTransition(props: SlideProps) {
+  return <Slide {...props} direction="up" />;
+}
 
 export const OutOfServiceModal = () => {
   const [open, setOpen] = useState(true);
@@ -16,25 +13,29 @@ export const OutOfServiceModal = () => {
   };
 
   return (
-    <Dialog
+    <Snackbar
       open={open}
+      autoHideDuration={7000}
       onClose={handleClose}
-      aria-labelledby="alert-dialog-title"
-      aria-describedby="alert-dialog-description"
+      anchorOrigin={{ vertical: "bottom", horizontal: "center" }}
+      TransitionComponent={SlideTransition}
     >
-      <DialogTitle id="alert-dialog-title">
-        Nos encontramos actualmente fuera de servicio
-      </DialogTitle>
-      <DialogContent>
-        <DialogContentText id="alert-dialog-description">
-          Por favor, ponte en contacto con el equipo de soporte.
-        </DialogContentText>
-      </DialogContent>
-      <DialogActions>
-        <Button onClick={handleClose} autoFocus>
-          Cerrar
-        </Button>
-      </DialogActions>
-    </Dialog>
+      <Alert
+        style={{
+          backgroundColor: "transparent",
+          backdropFilter: "blur(10px)",
+          borderRadius: 10,
+          padding: 20,
+        }}
+        onClose={handleClose}
+        severity="info"
+        sx={{ width: "100%" }}
+      >
+        <p className="text-center text-2xl text-blue-700">
+          Nos encontramos actualmente fuera de servicio. Por favor, ponte en
+          contacto con el equipo de soporte.
+        </p>
+      </Alert>
+    </Snackbar>
   );
 };

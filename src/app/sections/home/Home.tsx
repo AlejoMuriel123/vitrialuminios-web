@@ -41,7 +41,7 @@ export const Home = () => {
       </Carousel>
 
       <a
-        href="#products"
+        href="#gallery"
         className="absolute -bottom-8 text-blue-700 border-2 border-blue-700 bg-white left-0 right-0 mx-auto w-fit inline-block px-10 py-4 rounded-full text-xl font-semibold hover:bg-blue-700 hover:text-white transition duration-300 ease-in-out transform hover:translate-y-1 hover:shadow-lg"
       >
         <span>&#9660;</span> Ver Fotos de trabajos <span>&#9660;</span>

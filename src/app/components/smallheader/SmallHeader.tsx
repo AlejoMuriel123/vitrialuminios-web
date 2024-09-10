@@ -2,8 +2,8 @@ import React, { cloneElement, useState } from "react";
 import PropTypes from "prop-types";
 import { AppBar, IconButton, useScrollTrigger } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
-import { ScrollToColor } from "../ScrollToColor";
-import { MenuDrawer } from "../MenuDrawer";
+import { ScrollToColor } from "../scrolltocolor";
+import { MenuDrawer } from "../menudrawer";
 import logoBlue from "../../assets/img/logo/logo-blue.png";
 import logoWhite from "../../assets/img/logo/logo-white.png";
 
